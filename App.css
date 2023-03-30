@@ -1,0 +1,39 @@
+  html{
+    scroll-snap-type: y mandatory;
+  }
+
+.App{
+  background-color: rgb(0, 0, 0);
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  
+}
+.APP_Scenes{
+  height: 100vh;
+  max-height: 800px;
+  width: 80%;
+  max-width: 500px;
+  border: 1px transparent rgb(255, 255, 255);
+  border-radius: 20px;
+  overflow: scroll;
+  scroll-snap-type: y mandatory;
+  position: relative;
+
+  
+  
+}
+
+/*/ Esconde scrollbar no chrome, safari e opera/*/
+
+.APP_Scenes::-webkit-scrollbar{
+  display: none;
+}
+
+
+/*/ Esconde scrollbar no internet explore, edge e firefox/*/
+
+.APP_Scenes{
+-ms-overflow-style: none;
+scrollbar-width: none;
+}
