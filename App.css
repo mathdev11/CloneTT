@@ -14,7 +14,7 @@
   max-height: 800px;
   width: 80%;
   max-width: 500px;
-  border: 1px transparent rgb(255, 255, 255);
+  border: 2px transparent rgb(255, 255, 255);
   border-radius: 20px;
   overflow: scroll;
   scroll-snap-type: y mandatory;
