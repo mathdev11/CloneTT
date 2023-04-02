@@ -3,7 +3,7 @@ import "./app.css";
 import Video from "./pages/Video";
 import db from "./config/firebase";
 import { collection, getDocs } from "firebase/firestore/lite";
-import { DockSharp } from "@mui/icons-material";
+
 
 function App() {
   const [video, setVideos] = useState([]);
@@ -11,13 +11,13 @@ function App() {
   async function getVideos() {
     const videosColletion = collection(db, "videos");
     const videosSnapShot = await getDocs(videosColletion);
-    const videoslist = videosSnapShot.docs.map((doc) => doc.data());
+    const videoslist = videosSnapShot.docs.map(doc => doc.data());
     setVideos(videoslist);
   }
 
   useEffect(() => {
     getVideos();
-  }, []);
+  }, [])
 
   return (
     <div className="App">
@@ -32,11 +32,9 @@ function App() {
               description={item.description}
               music={item.music}
               url={item.url}
-            ></Video>
+            />
           );
         })}
-
-        <Video />
       </div>
     </div>
   );
