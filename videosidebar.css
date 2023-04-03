@@ -7,6 +7,11 @@
 }
 
 .videoSidebar__options{
-    padding: 10px;
+    padding: 20px;
     text-align: center;
 }
+@media only screen and (max-width: 400px){
+    .videoSidebar{
+        top:46%;
+    }
+    }

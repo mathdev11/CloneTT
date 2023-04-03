@@ -19,8 +19,6 @@
   overflow: scroll;
   scroll-snap-type: y mandatory;
   position: relative;
-
-  
   
 }
 
@@ -36,4 +34,11 @@
 .APP_Scenes{
 -ms-overflow-style: none;
 scrollbar-width: none;
+}
+
+@media only screen and (max-width: 400px){
+   .APP_Scenes{
+     width: 100%;
+     height: 100vh;
+   }
 }

@@ -3,11 +3,11 @@ import  Videofooter from "./components/footer/Videofooter"
 import VideoSidebar from "./components/sidebar/VideoSidebar";
 import "./video.css";
 
-function Video({likes, messages, shares, name, description, music, url}) {
+function Video({likes,messages,shares,name,description,music,url}) {
   const videoRef = useRef(null);
   const [play, setPlay] = useState(false);
 
-  function handleStart() {
+  function handdleStart() {
     if (play) {
       videoRef.current.pause();
       setPlay(false);
@@ -21,7 +21,7 @@ function Video({likes, messages, shares, name, description, music, url}) {
       <video
         className="video__player"
         ref={videoRef}
-        onClick={handleStart}
+        onClick={handdleStart}
         loop
         src={url}
         ></video>
@@ -37,7 +37,6 @@ function Video({likes, messages, shares, name, description, music, url}) {
         
         />
          
-
     </div>
   );
 }
